@@ -13,6 +13,13 @@ namespace WinFormsControlsApp
             //btnOk.ForeColor = Color.White;
 
             //btnOk.Enabled = false;
+
+            button1.MouseDoubleClick += BtnTest_MouseDoubleClick;
+        }
+
+        private void BtnTest_MouseDoubleClick(object? sender, MouseEventArgs e)
+        {
+            MessageBox.Show("double click");
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -54,6 +61,26 @@ namespace WinFormsControlsApp
         private void btnRight_Click(object sender, EventArgs e)
         {
             lblExample.Left += 5;
+        }
+
+        private void btnTest_MouseClick(object sender, MouseEventArgs e)
+        {
+            string message = "";
+
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    message += "Left";
+                    break;
+                case MouseButtons.Right:
+                    message += "Right";
+                    break;
+                case MouseButtons.Middle:
+                    message += "Middle";
+                    break;
+            }
+            message += " " + e.Clicks.ToString();
+            lblTest.Text = message;
         }
     }
 }

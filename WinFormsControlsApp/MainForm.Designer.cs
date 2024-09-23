@@ -36,6 +36,10 @@
             btnDown = new Button();
             btnLeft = new Button();
             btnRight = new Button();
+            btnTest = new Button();
+            lblTest = new Label();
+            button1 = new Button();
+            maskedTextBox1 = new MaskedTextBox();
             SuspendLayout();
             // 
             // btnOk
@@ -66,7 +70,7 @@
             lblExample.BackColor = Color.Maroon;
             lblExample.Font = new Font("Segoe UI", 20F);
             lblExample.ForeColor = Color.White;
-            lblExample.Location = new Point(280, 391);
+            lblExample.Location = new Point(31, 208);
             lblExample.Name = "lblExample";
             lblExample.Size = new Size(117, 37);
             lblExample.TabIndex = 2;
@@ -112,6 +116,44 @@
             btnRight.UseVisualStyleBackColor = true;
             btnRight.Click += btnRight_Click;
             // 
+            // btnTest
+            // 
+            btnTest.Font = new Font("Segoe UI", 24F);
+            btnTest.Location = new Point(454, 208);
+            btnTest.Name = "btnTest";
+            btnTest.Size = new Size(230, 60);
+            btnTest.TabIndex = 4;
+            btnTest.Text = "Click me";
+            btnTest.UseVisualStyleBackColor = true;
+            btnTest.MouseDown += btnTest_MouseClick;
+            // 
+            // lblTest
+            // 
+            lblTest.AutoSize = true;
+            lblTest.Font = new Font("Segoe UI", 24F);
+            lblTest.Location = new Point(454, 352);
+            lblTest.Name = "lblTest";
+            lblTest.Size = new Size(0, 45);
+            lblTest.TabIndex = 5;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(557, 125);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 77);
+            button1.TabIndex = 6;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Font = new Font("Segoe UI", 24F);
+            maskedTextBox1.Location = new Point(226, 323);
+            maskedTextBox1.Mask = "+990 (999) 000-0000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(326, 50);
+            maskedTextBox1.TabIndex = 7;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,6 +162,10 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(696, 457);
+            Controls.Add(maskedTextBox1);
+            Controls.Add(button1);
+            Controls.Add(lblTest);
+            Controls.Add(btnTest);
             Controls.Add(btnRight);
             Controls.Add(btnLeft);
             Controls.Add(btnDown);
@@ -144,5 +190,9 @@
         private Button btnDown;
         private Button btnLeft;
         private Button btnRight;
+        private Button btnTest;
+        private Label lblTest;
+        private Button button1;
+        private MaskedTextBox maskedTextBox1;
     }
 }
